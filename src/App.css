@@ -1,3 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+@import '../node_modules/normalize.css/normalize.css';
 .App {
-  text-align: center;
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ grid-auto-rows: minmax(10px, auto);
+ grid-gap: 0.5em;
+}
+
+.name {
+  grid-column: 1/-1;
+}
+
+.section-header {
+  grid-column: 1/3;
+  padding: 0 2em;
+}
+
+.exp {
+  grid-column: 1/3;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(20px, auto);
+  grid-gap: 1em;
+}
+
+.exp-wrapper {
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-auto-rows: minmax(20px, auto);
+  grid-gap: .5em;
+}
+
+.side-bar {
+  grid-row: 2/4;
+  grid-column: 3;
+}
+
+.company, .time, .desc, .tech {
+  grid-column: 1/-1;
+}
+
+
+
+
+.App > div  {
+  background: #eee;
+  padding: 1em 2em;
+}
+
+
+.App > div:nth-child(odd) {
+  background: #ddd;
 }
