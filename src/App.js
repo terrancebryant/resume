@@ -4,6 +4,7 @@ import './App.css';
 class App extends Component {
 
   state = {
+    name: 'Terrance Bryant',
     data: [
       {
         id: 1, company: 'ServiceChannel',
@@ -23,7 +24,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Name name={"Terrance Bryant"} />
+        <Name name={this.state.name} />
         <Header header={"EXPERIENCE"} />
         <ExpList data={this.state.data} />
         <div className="side-bar">side bar</div>
